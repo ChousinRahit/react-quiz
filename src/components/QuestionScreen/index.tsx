@@ -63,6 +63,16 @@ const ButtonWrapper = styled.div`
   }
 `
 
+const CorrectAnswer = styled.div`
+  border: 1px solid #25aa25;
+  padding: 10px 20px;
+  border-radius: 12px;
+  width: max-content;
+  p {
+    font-size: 14px;
+  }
+`
+
 const QuestionScreen: FC = () => {
   const [activeQuestion, setActiveQuestion] = useState<number>(0)
   const [selectedAnswer, setSelectedAnswer] = useState<string[]>([])
@@ -140,9 +150,6 @@ const QuestionScreen: FC = () => {
 
   return (
     <PageCenter>
-      <LogoContainer>
-        <AppLogo />
-      </LogoContainer>
       <QuizContainer selectedAnswer={selectedAnswer.length > 0}>
         <QuizHeader
           activeQuestion={activeQuestion}
@@ -158,6 +165,11 @@ const QuestionScreen: FC = () => {
           handleAnswerSelection={handleAnswerSelection}
           selectedAnswer={selectedAnswer}
         />
+        {selectedAnswer.length > 0 ? (
+          <CorrectAnswer>
+            <p>{correctAnswers.map((answer) => answer)}</p>
+          </CorrectAnswer>
+        ) : null}
         <ButtonWrapper>
           <Button
             text={activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}

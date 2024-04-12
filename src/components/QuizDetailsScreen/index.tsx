@@ -47,15 +47,12 @@ const QuizDetailsScreen = () => {
   return (
     <PageCenter light justifyCenter>
       <CenterCardContainer>
-        <LogoContainer>
-          <AppLogo />
-        </LogoContainer>
         <AppTitle>VARA quiz</AppTitle>
         <DetailTextContainer>
           <DetailText>
             Selected Quiz Topic: <HighlightedText>{selectedQuizTopic}</HighlightedText>
           </DetailText>
-          <DetailText>
+          {/*          <DetailText>
             Total questions to attempt:{' '}
             <HighlightedText>{totalQuestions}</HighlightedText>
           </DetailText>
@@ -68,7 +65,7 @@ const QuizDetailsScreen = () => {
           <DetailText>
             To save time, you can skip questions. Skipped questions will show up at the
             end of the quiz.
-          </DetailText>
+  </DetailText>*/}
         </DetailTextContainer>
         <Button
           text="Start"

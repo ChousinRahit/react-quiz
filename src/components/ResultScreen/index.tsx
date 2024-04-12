@@ -127,9 +127,6 @@ const ResultScreen: FC = () => {
 
   return (
     <ResultScreenContainer>
-      <LogoContainer>
-        <AppLogo />
-      </LogoContainer>
       <InnerContainer>
         <ResultOverview result={result} />
         {result.map(
