@@ -188,12 +188,3 @@ export const javascript: Topic = {
   totalTime: questions?.length * 45,
   questions: questions,
 }
-
-function loop() {
-  for (i = 5; i < 5; i++) {
-    console.log(i)
-  }
-  console.log('final', i)
-}
-
-loop()
