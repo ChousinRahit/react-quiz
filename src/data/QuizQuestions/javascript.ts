@@ -68,6 +68,21 @@ const questions: Question[] = [
   },
   {
     question: "What's the output?",
+    code: `function a() {
+      console.log("hi);
+    }
+
+    a();
+    function b(){
+      console.log("bye")
+    }`,
+    choices: ['hi', 'bye'],
+    type: 'boolean',
+    correctAnswers: ['bye'],
+    score: 10,
+  },
+  {
+    question: "What's the output?",
     code: `(() => {
       let x, y;
       try {
@@ -118,6 +133,32 @@ console.log(typeof y);`,
     ],
     type: 'MAQs',
     correctAnswers: ['undefined, number'],
+    score: 10,
+  },
+  {
+    question: "What's the output?",
+    code: `var favouriteFood = "Mangos";
+
+    var food Thoughts = function ()
+    
+    console.log("Original favourite food: + favouriteFood);
+    
+    var favouriteFood = "Pizza";
+    
+    console.log("New favourite food: " + favouriteFood);
+    
+    };
+    
+    
+     foodThoughts()`,
+    choices: [
+      'Original favourite food: Mangos, New favourite food: sushi',
+      'Original favourite food: undefined, New favourite food: undefined',
+      'Original favourite food: undefined, New favourite food: sushi',
+      'Original favourite food: Mangos, New favourite food: undefined',
+    ],
+    type: 'MAQs',
+    correctAnswers: ['Original favourite food: undefined, New favourite food: sushi'],
     score: 10,
   },
 ]
