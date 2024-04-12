@@ -118,6 +118,23 @@ const questions: Question[] = [
     score: 10,
   },
   {
+    question: 'Whats the output?.',
+    code: `
+    function loop() {
+      for (i = 5; i < 5; i++) {
+        console.log(i)
+      }
+      console.log('final', i)
+    }
+    
+    loop()
+    `,
+    choices: ['1 2 3 4 5, 5', '5 5 5 5 5, 5', 'ReferenceError', 'TypeError'],
+    type: 'MAQs',
+    correctAnswers: ['ReferenceError'],
+    score: 10,
+  },
+  {
     question: "What's the output?",
     code: `(() => {
   let x = (y = 10);
@@ -171,3 +188,12 @@ export const javascript: Topic = {
   totalTime: questions?.length * 45,
   questions: questions,
 }
+
+function loop() {
+  for (i = 5; i < 5; i++) {
+    console.log(i)
+  }
+  console.log('final', i)
+}
+
+loop()
