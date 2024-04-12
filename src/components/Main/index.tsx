@@ -13,9 +13,7 @@ function Main() {
   const { currentScreen, setCurrentScreen } = useQuiz()
 
   useEffect(() => {
-    setTimeout(() => {
-      setCurrentScreen(ScreenTypes.QuizTopicsScreen)
-    }, 1000)
+    setCurrentScreen(ScreenTypes.QuizTopicsScreen)
   }, [setCurrentScreen])
 
   const screenComponents = {
@@ -26,7 +24,7 @@ function Main() {
     [ScreenTypes.ResultScreen]: <ResultScreen />,
   }
 
-  const ComponentToRender = screenComponents[currentScreen] || <SplashScreen />
+  const ComponentToRender = screenComponents[currentScreen]
 
   return <>{ComponentToRender}</>
 }
